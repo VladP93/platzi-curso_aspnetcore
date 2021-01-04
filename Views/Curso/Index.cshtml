@@ -1,0 +1,23 @@
+@model Curso
+
+@{
+    ViewData["Title"] = "Información de Curso";
+    Layout = "Simple";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (ViewBag.mensaje != null)
+{
+<div class="alert alert-success" role="alert">
+    @ViewBag.mensaje
+</div>
+}
+
+<strong>desde index view</strong>
+<p>
+    Nombre: @Model.Nombre
+    Id: @Model.Id
+</p>
+
+<p><i>@ViewBag.Fecha</i></p>

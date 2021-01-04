@@ -1,0 +1,28 @@
+@*
+@model List<ObjetoEscuelaBase>
+*@
+
+<table class="table table-dark table-hover">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th colspan="2">Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var objetoEscuela in @Model)
+    {
+        <tr>
+            <td>@objetoEscuela.Id</td>
+            <td>@objetoEscuela.Nombre</td>
+            <td>
+                @Html.ActionLink("Editar","Edit", null, new {Id = objetoEscuela.Id}, new {@class="btn btn-info"})
+            </td>
+            <td>
+                @Html.ActionLink("Eliminar","Delete", null, new {Id = objetoEscuela.Id, Nombre = objetoEscuela.Nombre}, new {@class="btn btn-danger"})
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

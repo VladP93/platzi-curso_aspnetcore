@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Eliminar Curso";
+    Layout = "Simple";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="POST">
+    <div class="alert alert-warning">
+        ¿Está seguro que desea eliminar el curso @ViewBag.Nombre (@ViewBag.Id) ?
+        <br/>
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+    </div>
+</form>
+
+<p><i>@ViewBag.Fecha</i></p>

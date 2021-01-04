@@ -1,0 +1,18 @@
+@model IEnumerable<Alumno>
+
+@{
+    ViewData["Title"] = "Información de alumno";
+    Layout = "Simple";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<strong>Cargado desde la vista parcial</strong>
+
+<div class="container-fluid" style="margin-bottom: 10px;">
+    @Html.ActionLink("Crear Alumno","Create", null, null, new {@class="btn btn-dark"})
+</div>
+
+<partial name="ListaObjetosEscuela" />
+
+<p><i>@ViewBag.Fecha</i></p>
